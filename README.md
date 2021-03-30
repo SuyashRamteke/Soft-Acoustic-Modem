@@ -1,0 +1,5 @@
+# Soft-Acoustic-Modem
+
+Implemented a passband wireless transmission via a sound card acoustic signal with a carrier frequency equal to 1 KHz and a bit rate of 100 bits/sec. Binary Phase Shift Keying (BPSK) simulation results were analyzed by comparing the bit-error rate (BER) vs Signal to Noise Ratio (SNR) plots with and without incorporating a convolutional code.
+
+For baseband modulation, a root raised cosine filter was used as matched filter and sinc shape was used for pulse shaping. The signal was then bandpass modulated with a local carrier frequency and transmitted. Barker sequence was used for synchronization of the receiver frequency and local carrier frequency. After calculating the optimal sampling time instant by finding the instant with highest average energy, similar steps were employed for baseband demodulation. A simple maximum-likelihood (ML) detector was implemented to find the bits in error. A string 'HELLO " was transmitted and received as audio signal successfully with a 0.035 bit error rate.
